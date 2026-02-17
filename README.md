@@ -250,4 +250,4 @@ If this project helps you ship faster, consider starring ⭐ the repo.
 
 ## 👤 Built by
 
-**[Your Name]**
+**Harshit Negi**
