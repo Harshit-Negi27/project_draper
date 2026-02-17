@@ -12,11 +12,11 @@
 
 ## 🚀 Overview
 
-Project Draper is a **Streamlit UI + LangGraph backend** built to eliminate the platform API tax for early-stage startups.
+Project Draper is an end-to-end Autonomous Social Media Manager that transforms a single product description into a multi-platform marketing blitz.
 
-Instead of paying $100+/month for gated APIs before a single user converts, Draper uses a **research-first agentic pipeline** to generate high-quality, platform-native social content — then deploys it autonomously via a Selenium Browser Agent hijacking a local Chrome session.
+Unlike standard automation tools that simply "reformat" text, Draper acts as a Strategic Agent. It uses a specialized Research Node to scour the live web for market facts, competitor gaps, and product USPs, ensuring every post is factually grounded and high-conversion.
 
-**One product description in. Four platform-native posts out. Zero API bills.**
+The system is built on a modular LangGraph State Machine, allowing it to think, research, and execute cross-platform strategies simultaneously without human oversight.
 
 **The problem with existing tools:**
 - X/Twitter API — $100/mo Basic Tier + business verification
