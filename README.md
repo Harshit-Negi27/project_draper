@@ -41,42 +41,47 @@ Instead of paying $100+/month for gated APIs before a single user converts, Drap
 
 ```mermaid
 flowchart TD
-    User["🖥️ Streamlit UI\nProduct Name · Description · URL"] -->|Session Input| Research
+    UI["🖥️ Streamlit UI — Product Name · Description · URL"]
+    UI -->|Session Input| R
 
-    subgraph Research ["🔬 Research Layer (The Brain)"]
-        R["Research Node · Tavily API\nReal-time Market & Competitor Data"]
+    subgraph RESEARCH ["🔬 Research Layer"]
+        R["Research Node — Tavily API — Real-time Market and Competitor Data"]
     end
 
-    Research -->|Enriched Context| Orchestrator
+    R -->|Enriched Context| O
 
-    subgraph Orchestrator ["⚙️ LangGraph StateGraph · Parallel Fan-Out"]
+    subgraph ORCHESTRATION ["⚙️ LangGraph StateGraph — Parallel Fan-Out"]
         O{"Shared AgentState"}
-        O --> TW
-        O --> LI
-        O --> FB
-        O --> IG
     end
 
-    subgraph Agents ["🤖 Worker Nodes"]
-        TW["🐦 Twitter Agent\n< 200 chars · High-conversion"]
-        LI["💼 LinkedIn Agent\nThought-leadership · Long-form"]
-        FB["📘 Facebook Agent\nHype-based · Community-first"]
-        IG["📸 Instagram Agent\nVisual concepts · Hashtag strategy"]
+    O --> TW
+    O --> LI
+    O --> FB
+    O --> IG
+
+    subgraph WORKERS ["🤖 Worker Nodes"]
+        TW["🐦 Twitter Agent — High-conversion copy under 200 chars"]
+        LI["💼 LinkedIn Agent — Thought-leadership and long-form"]
+        FB["📘 Facebook Agent — Hype-based and community-first"]
+        IG["📸 Instagram Agent — Visual concepts and hashtag strategy"]
     end
 
-    TW & LI & FB & IG --> Aggregator
+    TW --> AGG
+    LI --> AGG
+    FB --> AGG
+    IG --> AGG
 
-    subgraph Deploy ["🌐 Deployment Layer (The Hacker Bridge)"]
-        Aggregator["Post Aggregator · Format Outputs"]
-        Aggregator --> Browser["🔧 Selenium Browser Agent\nChrome CDP · Port 9222\nAutonomous Form Submission"]
+    subgraph DEPLOY ["🌐 Deployment Layer — The Hacker Bridge"]
+        AGG["Post Aggregator — Collect and Format All Outputs"]
+        AGG --> SEL["🔧 Selenium Browser Agent — Chrome CDP Port 9222 — Autonomous Posting"]
     end
 
-    Browser --> Live["✅ Live Posts\nTwitter · LinkedIn · Facebook · Instagram"]
+    SEL --> LIVE["✅ Live Posts — Twitter · LinkedIn · Facebook · Instagram"]
 
-    style Research fill:#1a1a2e,stroke:#e94560,color:#fff
-    style Orchestrator fill:#16213e,stroke:#0f3460,color:#fff
-    style Agents fill:#0f3460,stroke:#533483,color:#fff
-    style Deploy fill:#533483,stroke:#e94560,color:#fff
+    style RESEARCH fill:#1a1a2e,stroke:#e94560,color:#fff
+    style ORCHESTRATION fill:#16213e,stroke:#0f3460,color:#fff
+    style WORKERS fill:#0f3460,stroke:#533483,color:#fff
+    style DEPLOY fill:#533483,stroke:#e94560,color:#fff
 ```
 
 ---
