@@ -1,0 +1,31 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables (CRITICAL: Do not upload your API keys!)
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Selenium / Webdriver
+chromedriver.exe
+chromedriver
+/C:/sel_chrome/
+/tmp/sel_chrome/
+*.log
+
+# Project specific
+research_cache/
+*.json
+!requirements.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
