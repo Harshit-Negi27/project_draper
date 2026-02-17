@@ -1,6 +1,6 @@
 # 🎯 Project Draper
-> **An Agentic Social Media Engine for Startups That Refuse to Pay the API Tax.**
-> *Research the market. Generate platform-native content. Post autonomously. No API bills.*
+> **Project Draper is an end-to-end Autonomous Marketing Manager that transforms a single product description into a research-backed, multi-platform brand presence.**
+
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-purple)](https://langchain-ai.github.io/langgraph/)
